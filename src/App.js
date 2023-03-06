@@ -1,25 +1,40 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import UserInfo from './UserInfo/UserInfo';
+
+const users = [
+  {
+    id:1,
+    name: "John",
+    surname: "Doe",
+    date: "1947-05-06",
+    email: "john@mail.com",
+  },
+  {
+    id:2,
+    name: "Jane",
+    surname: "Doe",
+    date: "1972-08-14",
+    email: "jane@mail.com",
+  },
+  {
+    id:3,
+    name: "Bob",
+    surname: "Smith",
+    date: "1964-02-21",
+    email: "smith@mail.com",
+  }
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <h1> User Information </h1>
+        <UserInfo users={users}/>
     </div>
+    
   );
 }
 
 export default App;
+
